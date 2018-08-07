@@ -162,4 +162,4 @@ def meme(path):
 if __name__ == "__main__":
     """ Only runs in dev """
     app.logger.setLevel(logging.DEBUG)
-    app.run(debug=True)
+    app.run(debug=True, host=os.getenv('HTTP_PLATFORM_SERVE', '127.0.0.1'))
